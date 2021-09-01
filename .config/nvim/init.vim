@@ -1,14 +1,28 @@
+"  ,_   _,_ ,_           .  ,__,   . -/-
+"_/ (__(_/_/ (__(_/_   _/__/ / (__/__/_ 
+"               _/_                     
+"              (/                       
+
 " Plugins {{{
 call plug#begin("~/.vim/plugged")
 
 Plug 'folke/which-key.nvim'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
+
+Plug 'easymotion/vim-easymotion'
+
+" FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
-Plug 'easymotion/vim-easymotion'
+
+" Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Ranger
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 
