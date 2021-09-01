@@ -12,6 +12,9 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+
 call plug#end()
 
 " Set theme
@@ -23,6 +26,8 @@ colorscheme tokyonight
 
 let g:airline_theme='deus'
 
+let mapleader = " "
+
 set tabstop=2
 set noshowmode
 set shiftwidth=2
@@ -30,16 +35,16 @@ set expandtab
 
 set number
 
-
 " Keybindings
 
 " Paste for search
 tnoremap <expr> <C-v> '<C-\><C-N>pi'
 
 " Open config files
-noremap <C-o>z :e ~/.zshrc <CR>
-noremap <C-o>v :e ~/.config/nvim/init.vim <CR>
-
+"noremap <leader-o>z :e ~/.zshrc <CR>
+"noremap <leader-o>v :e ~/.config/nvim/init.vim <CR>
+noremap <leader>o :GFiles <CR>
+noremap <C-b> :buffers <CR>
 " Copy path
 nmap cp :let @" = expand("%")<cr>
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
