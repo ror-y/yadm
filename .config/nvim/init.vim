@@ -1,7 +1,7 @@
 "  ,_   _,_ ,_           .  ,__,   . -/-
-"_/ (__(_/_/ (__(_/_   _/__/ / (__/__/_ 
-"               _/_                     
-"              (/                       
+"_/ (__(_/_/ (__(_/_   _/__/ / (__/__/_
+"               _/_
+"              (/
 
 " Plugins {{{
 call plug#begin("~/.vim/plugged")
@@ -61,7 +61,7 @@ nnoremap <leader>o :GFiles <CR>
 
 " File management {{{
 nnoremap <C-b> :buffers <CR>
-nnoremap  <silent> <leader><Tab>    :bnext!<CR> 
+nnoremap  <silent> <leader><Tab>    :bnext!<CR>
 nnoremap  <silent> <leader><S-Tab>  :bprevious!<CR>
 nnoremap  <silent> <Tab>            <C-^>
 " }}}
@@ -94,6 +94,25 @@ let g:coc_global_extensions = [
 \ 'coc-rls'
 \ ]
 " }}}
+
+" Section Folding {{{
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=syntax
+nnoremap <,> za
+" }}}
+
+" Config files {{{
+nnoremap <leader>ez :vsplit ~/.zshrc <CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
+" }}}
+
+" Easymotion {{{
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+nmap s <Plug>(easymotion-overwin-f)
+"}}}
 
 " Section Folding {{{
 set foldenable
