@@ -1,51 +1,106 @@
+"  ,_   _,_ ,_           .  ,__,   . -/-
+"_/ (__(_/_/ (__(_/_   _/__/ / (__/__/_ 
+"               _/_                     
+"              (/                       
+
+" Plugins {{{
 call plug#begin("~/.vim/plugged")
 
-" Which Key
 Plug 'folke/which-key.nvim'
 
-" Fuzzy find
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
+
+Plug 'easymotion/vim-easymotion'
+
+Plug 'leafOfTree/vim-vue-plugin'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+" FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Theme
-Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
-Plug 'easymotion/vim-easymotion'
+
+" Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Ranger
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+
 call plug#end()
+" }}}
 
-" Set theme
-if (has("termguicolors"))
-set termguicolors
-endif
+" Colors {{{
 syntax enable
+set termguicolors
 colorscheme tokyonight
-
 let g:airline_theme='deus'
+" }}}
 
+" Tabs and Spaces {{{
 set tabstop=2
 set noshowmode
 set shiftwidth=2
 set expandtab
+" }}}
 
+" UI {{{
+let mapleader = " "
 set number
+set relativenumber
+" }}}
 
-
-" Keybindings
-
-" Paste for search
-tnoremap <expr> <C-v> '<C-\><C-N>pi'
-
-" Open config files
-noremap <C-o>z :e ~/.zshrc <CR>
-noremap <C-o>v :e ~/.config/nvim/init.vim <CR>
-
-" Copy path
+" Search {{{
 nmap cp :let @" = expand("%")<cr>
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
+tnoremap <expr> <C-v> '<C-\><C-N>pi'
+nnoremap <leader>o :GFiles <CR>
+" }}}
 
-" Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" `s{char}{label}`
-nmap s <Plug>(easymotion-overwin-f)
+" File management {{{
+nnoremap <C-b> :buffers <CR>
+nnoremap  <silent> <leader><Tab>    :bnext!<CR> 
+nnoremap  <silent> <leader><S-Tab>  :bprevious!<CR>
+nnoremap  <silent> <Tab>            <C-^>
+" }}}
 
+" Config files {{{
+nnoremap <leader>ez :e ~/.zshrc <CR>
+nnoremap <leader>ev :e $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
+" }}}
 
+" Easymotion {{{
+"let g:EasyMotion_do_mapping = 0 " Disable default mappings
+"nmap s <Plug>(easymotion-overwin-f)
+" }}}
+
+" COC {{{
+let g:coc_global_extensions = [
+\ 'coc-vimlsp',
+\ 'coc-snippets',
+\ 'coc-tsserver',
+\ 'coc-html',
+\ 'coc-css',
+\ 'coc-yaml',
+\ 'coc-lists',
+\ 'coc-sh',
+\ 'coc-phpls',
+\ 'coc-pairs',
+\ 'coc-json',
+\ 'coc-eslint',
+\ 'coc-rls'
+\ ]
+" }}}
+
+" Section Folding {{{
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=syntax
+nnoremap <,> za
+" }}}
+
+" vim:foldmethod=marker:foldlevel=0
