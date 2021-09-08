@@ -18,6 +18,8 @@ Plug 'leafOfTree/vim-vue-plugin'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
+Plug 'kshenoy/vim-signature'
+
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -113,6 +115,10 @@ nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap s <Plug>(easymotion-overwin-f)
 "}}}
+
+" Markers {{{
+nnoremap <leader>m :marks<CR>
+" }}}
 
 " Section Folding {{{
 set foldenable
