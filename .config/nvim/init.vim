@@ -60,6 +60,7 @@ set relativenumber
 " Search {{{
 nmap cp :let @" = expand("%")<cr>
 tnoremap <expr> <C-v> '<C-\><C-N>pi'
+nnoremap <leader>d :Rg'<CR>
 nnoremap <leader>o :GFiles <CR>
 " }}}
 
