@@ -91,7 +91,8 @@ let g:coc_global_extensions = [
 \ 'coc-pairs',
 \ 'coc-json',
 \ 'coc-eslint',
-\ 'coc-rls'
+\ 'coc-rls',
+\ 'coc-tabnine'
 \ ]
 " }}}
 
@@ -111,6 +112,15 @@ nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
 
 " Markers {{{
 nnoremap <leader>m :marks<CR>
+" }}}
+
+" Git {{{
+nnoremap <leader>a :Git blame<CR>
+nnoremap <leader>ogg :Gbrowse<CR>
+" }}}
+
+" Buffer management {{{
+nnoremap <leader>w :bd<CR>
 " }}}
 
 " Section Folding {{{
