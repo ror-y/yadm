@@ -57,10 +57,18 @@ Plug 'rbgrouleff/bclose.vim'
 "colorscheme gruvbox-flat
 "let g:gruvbox_flat_style = "dark"
 
-" Palenight (soothing dark)
-Plug 'drewtempelmeyer/palenight.vim'
+" Everforest (Green dark)
+Plug 'sainnhe/everforest'
+let g:everforest_background = 'hard'
+let g:everforest_cursor = 'green'
 set background=dark
-colorscheme palenight
+let g:airline_theme = 'everforest'
+colorscheme everforest
+
+" Palenight (soothing dark)
+"Plug 'drewtempelmeyer/palenight.vim'
+"set background=dark
+"colorscheme palenight
 
 call plug#end()
 " }}}
@@ -68,7 +76,7 @@ call plug#end()
 " Theme & Colors {{{
 syntax enable
 set termguicolors
-let g:airline_theme='deus'
+"let g:airline_theme='deus'
 " }}}
 
 " Tabs and Spaces {{{
