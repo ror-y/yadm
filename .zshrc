@@ -1,10 +1,12 @@
+# Prevents warning saying I can't access certain files in zshrc directories
+ZSH_DISABLE_COMPFIX="true"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/rorysmith/.oh-my-zsh"
-
-export FZF_BASE="$HOME/.fzf"
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -74,10 +76,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git zsh-autosuggestions
-	fzf
-)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,20 +112,30 @@ alias cop="git checkout -p"
 alias ga="git add"
 alias gap="git add -p"
 alias gc="git commit -m"
-alias gg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias gg="git log develop --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias ggr="git log --pretty=format:\"%ad %h by %an, %s\" --date=iso | sort -r | less"
 alias gp="git pull"
 alias gs="git status"
 alias gsh="git show"
 alias gst="git stash"
 alias gu="git push"
 
-# Misc Aliases
+# Navigation
 alias ..="cd .."
 alias chess="cd ~/code/chess"
-h () {
+alias tests="chess && cd client/tests"
+
+# Builds
+build() {
   chess;
-  node client/build-x -HLE ${(j:,:)*};
+  client/build/bin/build "$@"
 }
+alias b="build"
+alias bs="build serve"
+
+# Testing
+alias localhoststart="tests && npm run start"
+alias cyopen="tests && npm run cy:open"
 
 # Virtual Box aliases
 alias vgo="vagrant up web11" # starting work day
@@ -136,6 +145,13 @@ alias vstat="vagrant status" # show current machine states
 alias vreload="vagrant reload web11" # need to reboot the vm  (vm must be up)
 alias vdestroy="vagrant destroy web11" # something went totally bad in the vm need to rebuild it - after running this you will need to run `vagrant up web11`
 
-# Open commonly used nvim-specific config files. `o_` is 'open'.
+# VIM
+alias o_zsh="nvim ~/.zshrc"
 alias o_vim="nvim ~/.config/nvim/init.vim"
-alias o_zshrc="nvim ~/.zshrc"
+# alias o_coc="nvim ~/.coc/ TODO
+alias s_zsh="source ~/.zshrc"
+alias s_vim="source ~/.config/nvim/init.vim"
+alias v="chess && nvim ."
+
+# Fix SSH audit issue
+alias sfix="eval \"$(ssh-agent -s)\"; ssh-add -K ~/.ssh/id_ed25519;"

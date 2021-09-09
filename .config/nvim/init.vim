@@ -12,6 +12,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
 
+Plug 'easymotion/vim-easymotion'
+
 Plug 'leafOfTree/vim-vue-plugin'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
@@ -71,10 +73,18 @@ nnoremap  <silent> <leader><S-Tab>  :bprevious!<CR>
 nnoremap  <silent> <Tab>            <C-^>
 " }}}
 
+" Scrolling {{{
+set scrolloff=30
+" }}}
 " Config files {{{
 nnoremap <leader>ez :e ~/.zshrc <CR>
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
+" }}}
+
+" Easymotion {{{
+"let g:EasyMotion_do_mapping = 0 " Disable default mappings
+"nmap s <Plug>(easymotion-overwin-f)
 " }}}
 
 " COC {{{
@@ -132,3 +142,4 @@ nnoremap <,> za
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
+
