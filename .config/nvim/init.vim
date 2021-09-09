@@ -53,9 +53,14 @@ Plug 'rbgrouleff/bclose.vim'
 "let g:gruvbox_colors_red = '#00FF00'
 
 " Gruvbox Flat
-Plug 'eddyekofo94/gruvbox-flat.nvim'
-colorscheme gruvbox-flat
-let g:gruvbox_flat_style = "dark"
+"Plug 'eddyekofo94/gruvbox-flat.nvim'
+"colorscheme gruvbox-flat
+"let g:gruvbox_flat_style = "dark"
+
+" Palenight (soothing dark)
+Plug 'drewtempelmeyer/palenight.vim'
+set background=dark
+colorscheme palenight
 
 call plug#end()
 " }}}
