@@ -3,6 +3,11 @@
 "               _/_
 "              (/
 
+" Theme & Colors {{{
+syntax enable
+set termguicolors
+" }}}
+
 " Plugins {{{
 call plug#begin("~/.vim/plugged")
 
@@ -30,9 +35,8 @@ Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Lightline
+Plug 'itchyny/lightline.vim'
 
 " Ranger
 Plug 'francoiscabrol/ranger.vim'
@@ -56,27 +60,15 @@ Plug 'rbgrouleff/bclose.vim'
 "Plug 'eddyekofo94/gruvbox-flat.nvim'
 "colorscheme gruvbox-flat
 "let g:gruvbox_flat_style = "dark"
-
-" Everforest (Green dark)
-Plug 'sainnhe/everforest'
-let g:everforest_background = 'hard'
-let g:everforest_cursor = 'green'
-set background=dark
-let g:airline_theme = 'everforest'
-colorscheme everforest
-
+  
 " Palenight (soothing dark)
 "Plug 'drewtempelmeyer/palenight.vim'
 "set background=dark
 "colorscheme palenight
 
-call plug#end()
-" }}}
+Plug 'sainnhe/everforest'
 
-" Theme & Colors {{{
-syntax enable
-set termguicolors
-"let g:airline_theme='deus'
+call plug#end()
 " }}}
 
 " Tabs and Spaces {{{
@@ -91,6 +83,14 @@ let mapleader = " "
 set number
 set relativenumber
 set timeoutlen=500
+
+" Everforest (Green dark)
+let g:everforest_background = 'hard'
+let g:everforest_cursor = 'green'
+set background=dark
+colorscheme everforest
+let g:lightline = {'colorscheme' : 'everforest'}
+
 " }}}
 
 " Search {{{
@@ -153,6 +153,15 @@ nnoremap <leader>og :Gbrowse<CR>
 
 " Buffer management {{{
 nnoremap <leader>w :bd<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+nnoremap <leader>. :vertical resize +5<CR>
+nnoremap <leader>= :resize +5<CR>
+nnoremap <leader>- :resize -5<CR>
+nnoremap <leader>, :vertical resize -5<CR>
 " }}}
 
 " Save files {{{
