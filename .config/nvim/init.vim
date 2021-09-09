@@ -75,16 +75,17 @@ nnoremap  <silent> <Tab>            <C-^>
 
 " Scrolling {{{
 set scrolloff=30
+nnoremap j jzz
+nnoremap k kzz
+nnoremap <Down> jzz
+nnoremap <Up> kzz
+nnoremap G Gzz
 " }}}
+
 " Config files {{{
 nnoremap <leader>ez :e ~/.zshrc <CR>
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
-" }}}
-
-" Easymotion {{{
-"let g:EasyMotion_do_mapping = 0 " Disable default mappings
-"nmap s <Plug>(easymotion-overwin-f)
 " }}}
 
 " COC {{{
@@ -104,20 +105,6 @@ let g:coc_global_extensions = [
 \ 'coc-rls',
 \ 'coc-tabnine'
 \ ]
-" }}}
-
-" Section Folding {{{
-set foldenable
-set foldlevelstart=10
-set foldnestmax=10
-set foldmethod=syntax
-nnoremap <,> za
-" }}}
-
-" Config files {{{
-nnoremap <leader>ez :vsplit ~/.zshrc <CR>
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
 " }}}
 
 " Markers {{{

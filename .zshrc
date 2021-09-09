@@ -155,3 +155,12 @@ alias v="chess && nvim ."
 
 # Fix SSH audit issue
 alias sfix="eval \"$(ssh-agent -s)\"; ssh-add -K ~/.ssh/id_ed25519;"
+
+# Yadm
+alias ys="yadm status"
+alias yd="yadm diff"
+alias yl="yadm list -a"
+alias ya="yadm add"
+alias yp="yadm pull"
+alias yc="yadm commit -m"
+alias yu="yadm push"
