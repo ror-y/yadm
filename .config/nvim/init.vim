@@ -12,11 +12,15 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
 
-Plug 'easymotion/vim-easymotion'
-
 Plug 'leafOfTree/vim-vue-plugin'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+Plug 'kshenoy/vim-signature'
+
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -56,6 +60,7 @@ set relativenumber
 " Search {{{
 nmap cp :let @" = expand("%")<cr>
 tnoremap <expr> <C-v> '<C-\><C-N>pi'
+nnoremap <leader>d :Rg'<CR>
 nnoremap <leader>o :GFiles <CR>
 " }}}
 
@@ -72,11 +77,6 @@ nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
 " }}}
 
-" Easymotion {{{
-"let g:EasyMotion_do_mapping = 0 " Disable default mappings
-"nmap s <Plug>(easymotion-overwin-f)
-" }}}
-
 " COC {{{
 let g:coc_global_extensions = [
 \ 'coc-vimlsp',
@@ -91,7 +91,8 @@ let g:coc_global_extensions = [
 \ 'coc-pairs',
 \ 'coc-json',
 \ 'coc-eslint',
-\ 'coc-rls'
+\ 'coc-rls',
+\ 'coc-tabnine'
 \ ]
 " }}}
 
@@ -109,10 +110,18 @@ nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
 " }}}
 
-" Easymotion {{{
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-nmap s <Plug>(easymotion-overwin-f)
-"}}}
+" Markers {{{
+nnoremap <leader>m :marks<CR>
+" }}}
+
+" Git {{{
+nnoremap <leader>a :Git blame<CR>
+nnoremap <leader>ogg :Gbrowse<CR>
+" }}}
+
+" Buffer management {{{
+nnoremap <leader>w :bd<CR>
+" }}}
 
 " Section Folding {{{
 set foldenable
