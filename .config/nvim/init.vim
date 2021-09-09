@@ -10,15 +10,17 @@ Plug 'folke/which-key.nvim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
-
-Plug 'easymotion/vim-easymotion'
-
 Plug 'leafOfTree/vim-vue-plugin'
+
+Plug 'preservim/nerdcommenter'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'kshenoy/vim-signature'
+
+Plug 'psliwka/vim-smoothie'
+
+Plug 'qpkorr/vim-bufkill'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -36,13 +38,31 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 
+" Tokyonight (dark blue)
+"Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
+"colorscheme tokyonight
+
+" GitHub (Dark grey)
+"Plug 'projekt0n/github-nvim-theme'
+"lua require('github-theme').setup()
+
+" Gruvbox (Retro dark)
+"Plug 'gruvbox-community/gruvbox'
+"colorscheme gruvbox
+"let g:gruvbox_contrast_dark = 'hard'
+"let g:gruvbox_colors_red = '#00FF00'
+
+" Gruvbox Flat
+Plug 'eddyekofo94/gruvbox-flat.nvim'
+colorscheme gruvbox-flat
+let g:gruvbox_flat_style = "dark"
+
 call plug#end()
 " }}}
 
-" Colors {{{
+" Theme & Colors {{{
 syntax enable
 set termguicolors
-colorscheme tokyonight
 let g:airline_theme='deus'
 " }}}
 
@@ -57,6 +77,7 @@ set expandtab
 let mapleader = " "
 set number
 set relativenumber
+set timeoutlen=500
 " }}}
 
 " Search {{{
@@ -71,6 +92,7 @@ nnoremap <C-b> :buffers <CR>
 nnoremap  <silent> <leader><Tab>    :bnext!<CR>
 nnoremap  <silent> <leader><S-Tab>  :bprevious!<CR>
 nnoremap  <silent> <Tab>            <C-^>
+nnoremap <leader>v :vsplit<CR>
 " }}}
 
 " Scrolling {{{
@@ -113,11 +135,15 @@ nnoremap <leader>m :marks<CR>
 
 " Git {{{
 nnoremap <leader>a :Git blame<CR>
-nnoremap <leader>ogg :Gbrowse<CR>
+nnoremap <leader>og :Gbrowse<CR>
 " }}}
 
 " Buffer management {{{
 nnoremap <leader>w :bd<CR>
+" }}}
+
+" Save files {{{
+nnoremap <leader>s :wa<CR>
 " }}}
 
 " Section Folding {{{
