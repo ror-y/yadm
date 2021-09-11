@@ -98,20 +98,15 @@ nmap cp :let @" = expand("%")<cr>
 tnoremap <expr> <C-v> '<C-\><C-N>pi'
 nnoremap <leader>d :Rg'<CR>
 nnoremap <leader>o :GFiles <CR>
-" }}}
-
-" File management {{{
-nnoremap <C-b> :buffers <CR>
-nnoremap  <silent> <leader><Tab>    :bnext!<CR>
-nnoremap  <silent> <leader><S-Tab>  :bprevious!<CR>
-nnoremap  <silent> <Tab>            <C-^>
-nnoremap <leader>v :vsplit<CR>
+nnoremap ; :
 " }}}
 
 " Scrolling {{{
 set scrolloff=30
 nnoremap j jzz
 nnoremap k kzz
+nnoremap J }
+nnoremap K {
 nnoremap <Down> jzz
 nnoremap <Up> kzz
 nnoremap G Gzz
@@ -164,8 +159,22 @@ nnoremap <leader>- :resize -5<CR>
 nnoremap <leader>, :vertical resize -5<CR>
 " }}}
 
+" File management {{{
+nnoremap <C-b> :buffers <CR>
+nnoremap  <silent> <leader><Tab>    :bnext!<CR>
+nnoremap  <silent> <leader><S-Tab>  :bprevious!<CR>
+nnoremap  <silent> <Tab>            <C-^>
+nnoremap <leader>v :vsplit<CR>
+nnoremap <leader><leader> <c-^>
+" }}}
+
 " Save files {{{
 nnoremap <leader>s :wa<CR>
+" }}}
+
+" Misc {{{
+nnoremap ; :
+set cursorline
 " }}}
 
 " Section Folding {{{
