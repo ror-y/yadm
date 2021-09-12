@@ -3,11 +3,6 @@
 "               _/_
 "              (/
 
-" Theme & Colors {{{
-syntax enable
-set termguicolors
-" }}}
-
 " Plugins {{{
 call plug#begin("~/.vim/plugged")
 
@@ -44,30 +39,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 
-" Tokyonight (dark blue)
-"Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
-"colorscheme tokyonight
-
-" GitHub (Dark grey)
-"Plug 'projekt0n/github-nvim-theme'
-"lua require('github-theme').setup()
-
-" Gruvbox (Retro dark)
-"Plug 'gruvbox-community/gruvbox'
-"colorscheme gruvbox
-"let g:gruvbox_contrast_dark = 'hard'
-"let g:gruvbox_colors_red = '#00FF00'
-
-" Gruvbox Flat
-"Plug 'eddyekofo94/gruvbox-flat.nvim'
-"colorscheme gruvbox-flat
-"let g:gruvbox_flat_style = "dark"
-  
-" Palenight (soothing dark)
-"Plug 'drewtempelmeyer/palenight.vim'
-"set background=dark
-"colorscheme palenight
-
 Plug 'sainnhe/everforest'
 
 call plug#end()
@@ -93,6 +64,11 @@ set background=dark
 colorscheme everforest
 let g:lightline = {'colorscheme' : 'everforest'}
 
+" }}}
+
+" Theme & Colors {{{
+syntax enable
+set termguicolors
 " }}}
 
 " Search {{{
