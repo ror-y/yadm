@@ -4,6 +4,7 @@
 "              (/
 
 set nocompatible
+"
   
 " Plugins {{{
 call plug#begin("~/.vim/plugged")
@@ -27,6 +28,8 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'tpope/vim-surround'
 
 Plug 'sainnhe/everforest'
+
+Plug 'christoomey/vim-sort-motion'
 
 " Git
 Plug 'tpope/vim-fugitive'
