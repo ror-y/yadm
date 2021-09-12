@@ -27,6 +27,8 @@ Plug 'psliwka/vim-smoothie'
 
 Plug 'qpkorr/vim-bufkill'
 
+Plug 'tpope/vim-surround'
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
