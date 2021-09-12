@@ -3,6 +3,8 @@
 "               _/_
 "              (/
 
+set nocompatible
+  
 " Plugins {{{
 call plug#begin("~/.vim/plugged")
 
@@ -24,6 +26,8 @@ Plug 'qpkorr/vim-bufkill'
 
 Plug 'tpope/vim-surround'
 
+Plug 'sainnhe/everforest'
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -38,8 +42,6 @@ Plug 'itchyny/lightline.vim'
 " Ranger
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
-
-Plug 'sainnhe/everforest'
 
 call plug#end()
 " }}}
@@ -76,7 +78,6 @@ nmap cp :let @" = expand("%")<cr>
 tnoremap <expr> <C-v> '<C-\><C-N>pi'
 nnoremap <leader>d :Rg'<CR>
 nnoremap <leader>o :GFiles <CR>
-nnoremap ; :
 " }}}
 
 " Scrolling {{{
@@ -151,7 +152,6 @@ nnoremap <leader>s :wa<CR>
 " }}}
 
 " Misc {{{
-nnoremap ; :
 set cursorline
 " }}}
 
