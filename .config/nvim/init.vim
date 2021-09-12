@@ -156,6 +156,7 @@ nnoremap <leader>s :wa<CR>
 
 " Misc {{{
 set cursorline
+let loaded_netrw = 0
 " }}}
 
 " Section Folding {{{
