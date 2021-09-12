@@ -3,9 +3,6 @@
 "               _/_
 "              (/
 
-set nocompatible
-"
-  
 " Plugins {{{
 call plug#begin("~/.vim/plugged")
 
