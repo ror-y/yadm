@@ -60,7 +60,7 @@ set expandtab
 let mapleader = " "
 set number
 set relativenumber
-set timeoutlen=500
+set timeoutlen=900
 
 " Everforest (Green dark)
 let g:everforest_background = 'hard'
