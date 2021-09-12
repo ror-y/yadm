@@ -146,8 +146,8 @@ nnoremap <C-b> :buffers <CR>
 nnoremap  <silent> <leader><Tab>    :bnext!<CR>
 nnoremap  <silent> <leader><S-Tab>  :bprevious!<CR>
 nnoremap  <silent> <Tab>            <C-^>
-nnoremap <leader>v :vsplit<CR>
 nnoremap <leader><leader> <c-^>
+nnoremap <leader>h :History<CR>
 " }}}
 
 " Save files {{{
