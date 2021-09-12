@@ -29,6 +29,8 @@ Plug 'sainnhe/everforest'
 
 Plug 'christoomey/vim-sort-motion'
 
+Plug 'tpope/vim-repeat'
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
