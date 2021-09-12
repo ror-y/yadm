@@ -169,4 +169,4 @@ nnoremap <,> za
 
 " vim:foldmethod=marker:foldlevel=0
 
-:RangerWorkingDirectory
+au BufEnter :RangerWorkingDirectory<CR>
