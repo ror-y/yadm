@@ -31,6 +31,8 @@ Plug 'christoomey/vim-sort-motion'
 
 Plug 'tpope/vim-repeat'
 
+Plug 'vim-scripts/VimIRC.vim'
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -144,7 +146,6 @@ nnoremap <leader>, :vertical resize -5<CR>
 
 set splitbelow
 set splitright
-
 " }}}
 
 " File management {{{
