@@ -63,14 +63,17 @@ let mapleader = " "
 set number
 set relativenumber
 set timeoutlen=900
+set spell spelllang=en_US
 
-" Everforest (Green dark)
 let g:everforest_background = 'hard'
 let g:everforest_cursor = 'green'
 set background=dark
 colorscheme everforest
 let g:lightline = {'colorscheme' : 'everforest'}
 
+set belloff=all
+
+autocmd VimResized * wincmd =
 " }}}
 
 " Theme & Colors {{{
@@ -83,17 +86,36 @@ nmap cp :let @" = expand("%")<cr>
 tnoremap <expr> <C-v> '<C-\><C-N>pi'
 nnoremap <leader>d :Rg'<CR>
 nnoremap <leader>o :GFiles <CR>
+set incsearch
+set hlsearch
+set ignorecase
 " }}}
 
 " Scrolling {{{
 set scrolloff=30
 nnoremap j jzz
 nnoremap k kzz
-nnoremap J }
-nnoremap K {
-nnoremap <Down> jzz
-nnoremap <Up> kzz
+nnoremap J }zz
+nnoremap K {zz
 nnoremap G Gzz
+nnoremap {  {zz
+nnoremap }  }zz
+nnoremap n  nzz
+nnoremap N  Nzz
+nnoremap [c [czz
+nnoremap ]c ]czz
+nnoremap [j <C-o>zz
+nnoremap ]j <C-i>zz
+nnoremap [s [szz
+nnoremap ]s ]szz
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
 " }}}
 
 " Config files {{{
@@ -161,9 +183,21 @@ nnoremap <leader>h :History<CR>
 nnoremap <leader>s :wa<CR>
 " }}}
 
+" Editing files {{{
+nnoremap c "_c
+nnoremap C "_C
+" }}}
+
 " Misc {{{
 set cursorline
 let loaded_netrw = 0
+
+let s:undodir = "/tmp/.undodir_" . $USER
+if !isdirectory(s:undodir)
+    call mkdir(s:undodir, "", 0700)
+endif
+let &undodir=s:undodir
+set undofile
 " }}}
 
 " Section Folding {{{
