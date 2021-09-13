@@ -97,8 +97,8 @@ nnoremap G Gzz
 " Config files {{{
 nnoremap <leader>ez :vsplit ~/.zshrc <CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
-nnoremap <leader>ep :vsplit ~/code/chess/app/config/parameters.yml
-nnoremap <leader>ec :vsplit ~/code/chess/app/config/config_dev_local.yml
+nnoremap <leader>ep :vsplit ~/code/chess/app/config/parameters.yml<CR>
+nnoremap <leader>ec :vsplit ~/code/chess/app/config/config_dev_local.yml<CR>
 nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
 " }}}
 
