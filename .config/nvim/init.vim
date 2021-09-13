@@ -141,6 +141,10 @@ nnoremap <leader>. :vertical resize +5<CR>
 nnoremap <leader>= :resize +5<CR>
 nnoremap <leader>- :resize -5<CR>
 nnoremap <leader>, :vertical resize -5<CR>
+
+set splitbelow
+set splitright
+
 " }}}
 
 " File management {{{
