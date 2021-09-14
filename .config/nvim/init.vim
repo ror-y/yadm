@@ -79,12 +79,6 @@ autocmd VimResized * wincmd =
 " Theme & Colors {{{
 syntax enable
 set termguicolors
-
-
-set -g default-terminal "xterm-256color"
-
-set-option -ga terminal-overrides ",xterm-256color:Tc"
-
 " }}}
 
 " Search {{{
