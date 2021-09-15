@@ -166,4 +166,4 @@ alias yc="yadm commit -m"
 alias yu="yadm push"
 
 # FSWatch for filesync
-alias fsw="fswatch -0 ~/.config/nvim/init.vim | xargs -0 -n 1 bash ~/auto-commit-push.sh"
+alias fsw="fswatch -0 ~/.config/nvim/init.vim ~/.config/alacritty/alacritty.yml ~/.tmux.conf | xargs -0 -n 1 bash ~/auto-commit-push.sh"
