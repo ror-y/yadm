@@ -122,7 +122,7 @@ noremap   <Right>  <NOP>
 nnoremap <leader>ea :vsplit ~/.config/alacritty/alacritty.yml<CR>
 nnoremap <leader>ec :vsplit ~/code/chess/app/config/config_dev_local.yml<CR>
 nnoremap <leader>ep :vsplit ~/code/chess/app/config/parameters.yml<CR>
-nnoremap <leader>et :vsplut ~/.tmux.conf<CR>
+nnoremap <leader>et :vsplit ~/.tmux.conf<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>ez :vsplit ~/.zshrc <CR>
 nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
