@@ -202,13 +202,6 @@ endif
 let &undodir=s:undodir
 set undofile
 
-let g:lightline = {
-      \ 'component': {
-      \   'filename': '%F',
-      \ }
-      \ }
-" }}}
-
 " Section Folding {{{
 set foldenable
 set foldlevelstart=10
