@@ -33,6 +33,8 @@ Plug 'tpope/vim-repeat'
 
 Plug 'vim-scripts/VimIRC.vim'
 
+Plug 'glepnir/dashboard-nvim'
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
