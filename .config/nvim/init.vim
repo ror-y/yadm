@@ -65,7 +65,6 @@ let mapleader = " "
 set number
 set relativenumber
 set timeoutlen=900
-set spell spelllang=en_US
 
 let g:everforest_background = 'hard'
 let g:everforest_cursor = 'green'
