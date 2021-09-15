@@ -66,7 +66,6 @@ set number
 set relativenumber
 set timeoutlen=900
 
-
 let g:everforest_background = 'hard'
 let g:everforest_cursor = 'green'
 set background=dark
