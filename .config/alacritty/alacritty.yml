@@ -140,6 +140,6 @@ colors: *everforest_dark_hard
 # Font
 font:
   normal:
-    family: Operator Mono
+    family: Iosevka Term Slab
   size: 13.0
   use_thin_strokes: true
