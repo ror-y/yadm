@@ -214,7 +214,6 @@ nnoremap C "_C
 
 " Misc {{{
 set cursorline
-let loaded_netrw = 0
 
 let s:undodir = "/tmp/.undodir_" . $USER
 if !isdirectory(s:undodir)
