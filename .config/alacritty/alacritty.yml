@@ -135,3 +135,11 @@ schemes:
 
 # Apply
 colors: *everforest_dark_hard
+
+
+# Font
+font:
+  normal:
+    family: Operator Mono
+  size: 13.0
+  use_thin_strokes: true
