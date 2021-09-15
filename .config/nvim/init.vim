@@ -201,6 +201,18 @@ if !isdirectory(s:undodir)
 endif
 let &undodir=s:undodir
 set undofile
+" Replace filename component of Lightline statusline
+let g:lightline = {
+      \ 'component_function': {
+      \   'filename': 'FilenameForLightline'
+      \ }
+      \ }
+
+" Show full path of filename
+function! FilenameForLightline()
+    return expand('%')
+endfunction
+
 " }}}
 
 " Section Folding {{{
