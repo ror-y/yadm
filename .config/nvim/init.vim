@@ -85,7 +85,7 @@ set termguicolors
 " Search {{{
 nmap cp :let @" = expand("%")<cr>
 tnoremap <expr> <C-v> '<C-\><C-N>pi'
-nnoremap <leader>d Ag:<CR>
+nnoremap <leader>d :Ag<CR>
 nnoremap <leader>o :GFiles <CR>
 set incsearch
 set hlsearch
