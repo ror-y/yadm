@@ -133,6 +133,9 @@ build() {
 alias b="build"
 alias bs="build serve"
 
+# Unison
+alias u="chess && unison web11"
+
 # Testing
 alias localhoststart="tests && npm run start"
 alias cyopen="tests && npm run cy:open"
@@ -167,3 +170,7 @@ alias yu="yadm push"
 
 # FSWatch for filesync
 alias fsw="fswatch -0 ~/.config/nvim/init.vim ~/.config/alacritty/alacritty.yml ~/.tmux.conf ~/.zshrc | xargs -0 -n 1 bash ~/auto-commit-push.sh"
+
+# Open preset tmux panes for code
+alias panes="tmux new-session \; split-window -h \; split-window -v \; split-window -v \; select-layout main-vertical \; select-pane -L \; resize-pane -R 200 \; attach"
+
