@@ -136,7 +136,25 @@ schemes:
 # Apply
 colors: *everforest_dark_hard
 
-
+# Cursor colors
+#
+# Colors which should be used to draw the terminal cursor.
+#
+# Allowed values are CellForeground/CellBackground, which reference the
+# affected cell, or hexadecimal colors like #ff00ff.
+cursor:
+  text: '#ff0000'
+  cursor: '#ffffff'
+# Vi mode cursor colors
+#
+# Colors for the cursor when the vi mode is active.
+#
+# Allowed values are CellForeground/CellBackground, which reference the
+# affected cell, or hexadecimal colors like #ff00ff.
+vi_mode_cursor:
+  text: '#00ff00'
+  cursor: '#ffffff'
+    
 # Font
 font:
   normal:
